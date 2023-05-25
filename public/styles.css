@@ -1,0 +1,72 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Estilos para dispositivos pequeños */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+}
+
+/* Estilos para dispositivos medianos */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+/* Estilos para dispositivos grandes */
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 20px;
+
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    #descripcion {
+        display: flex;
+        justify-content: center;
+        /* Centrado horizontal */
+        align-items: center;
+        /* Centrado vertical */
+
+    }
+
+    #Inicio {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+
+        height: 100%;
+        width: 100%;
+    }
+
+    #Inicio img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+}
