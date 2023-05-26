@@ -91,6 +91,9 @@ body {
     .container {
         padding: 20px;
     }
+    .entry-title{
+        font-size: 30px
+    }
 
 }
 
