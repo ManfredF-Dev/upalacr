@@ -4,12 +4,83 @@ body {
     margin: 0;
     padding: 0;
 }
+.entry-title {
+    font-size: 50px;
+    font-weight: 500;
+    margin: 20px 0;
+    border-top: 2px solid #ecd018;
+    border-bottom: 2px solid #ecd018;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 1.4;
+    padding: 10px 0;
+    background-image: -webkit-gradient(linear,10% 1%,25% 100%,from(#fc6),to(rgb(124, 43, 19)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 30px;
 }
+
+.loading-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    z-index: 9999;
+    /* Asegura que la animación esté por encima de otros elementos */
+}
+
+/* CARGA */
+.loading-animation::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    border-top-color: #000;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* PAGINAS */
+
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #1402bd;
+}
+
+
 
 /* Estilos para dispositivos pequeños */
 @media only screen and (max-width: 600px) {
@@ -31,6 +102,15 @@ body {
 
     .container {
         padding: 15px;
+    }
+
+    #descripcion {
+        display: flex;
+        justify-content: center;
+        /* Centrado horizontal */
+        align-items: center;
+        /* Centrado vertical */
+
     }
 }
 
