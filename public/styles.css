@@ -4,7 +4,11 @@ body {
     margin: 0;
     padding: 0;
 }
+
+
 .entry-title {
+    display: inline-flex;
+    align-items: center;
     font-size: 50px;
     font-weight: 500;
     margin: 20px 0;
@@ -13,9 +17,14 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     line-height: 1.4;
     padding: 10px 0;
-    background-image: -webkit-gradient(linear,10% 1%,25% 100%,from(#fc6),to(rgb(124, 43, 19)));
+    background-image: -webkit-gradient(linear, 10% 1%, 25% 100%, from(#fc6), to(rgb(124, 43, 19)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
 .container {
@@ -91,7 +100,8 @@ body {
     .container {
         padding: 20px;
     }
-    .entry-title{
+
+    .entry-title {
         font-size: 30px
     }
 

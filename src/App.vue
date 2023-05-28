@@ -1,94 +1,27 @@
 <template>
     <header class="p-3.5">
-        <!-- NAVBAR -->
-
-        <nav class="bg-white border-gray-200 dark:bg-gray-900">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="" class="flex items-center">
-                    <img src="https://cdn-icons-png.flaticon.com/128/1147/1147560.png" class="h-8 mr-3"
-                        alt="Flowbite Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CONOCEUPALACR</span>
-                </a>
-                <div class="flex md:order-2">
-                    <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
-                        aria-expanded="false"
-                        class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
-                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="sr-only">Search</span>
-                    </button>
-                    <div class="relative hidden md:block">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="sr-only">Search icon</span>
-                        </div>
-                        <input type="text" id="search-navbar"
-                            class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Search...">
-                    </div>
-                    <button data-collapse-toggle="navbar-search" type="button"
-                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                        aria-controls="navbar-search" aria-expanded="false">
-                        <span class="sr-only">Open menu</span>
-                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
-                    <div class="relative mt-3 md:hidden">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </div>
-                        <input type="text" id="search-navbar"
-                            class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Search...">
-                    </div>
-                    <ul
-                        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                        <li>
-                            <a href="#"
-                                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                                aria-current="page">INICIO</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">SOBRE
-                                NOSOTROS</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
 
         <!-- TITULO -->
         <div class="relative overflow-hidden bg-cover bg-no-repeat" style="
         background-position: 50%;
         background-image: url('https://cdn.sancarlosdigital.com/wp-content/uploads/2018/10/foto-upala.jpg');
         height: 300px;">
+
             <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
                 style="background-color: rgba(0, 0, 0, 0.75)">
                 <div class="flex h-full items-center justify-center">
                     <div id="titulo" class="px-6 text-center text-white md:px-12">
-                        <h1 class="entry-title">CONOCEUPALACR</h1>
+
+                        <h1 class="entry-title">
+                            <div class="logo-container">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1147/1147560.png"
+                                    class="h-8 m-3 logo-image" alt="Logo" />
+                                CONOCEUPALACR
+                                <img src="https://cdn-icons-png.flaticon.com/128/770/770633.png" class="h-8 m-3 logo-image"
+                                    alt="Logo" />
+                            </div>
+                        </h1>
+
 
                         <h3 class="mb-8 text-2xl font-sans">¡Upala cautivante de arriba a bajo!</h3>
                         <a href="#Inicio"
@@ -102,8 +35,9 @@
         </div>
         <div class="Info" id="descripcion">
             <p class="p-3.5 text-lg font-medium max-w-lg text-2xl font-semibold leading-loose text-justify  text-teal-600">
-                Bienvenido/a a nuestra página web "Conociendo UPALA". Aquí encontrarás una colección fascinante de fotos
-                de los lugares más hermosos y pintorescos de nuestro querido poblado.</p>
+                Nuestro objetivo es fomentar el turismo local y resaltar los tesoros ocultos de nuestro pueblo. 
+                Creemos firmemente que al mostrar la belleza de nuestros lugares y proporcionar guias sobre cómo llegar, 
+                podemos inspirar a los visitantes a explorar y apreciar todo lo que tenemos para ofrecer.</p>
         </div>
     </header>
 
@@ -249,7 +183,7 @@
         <div class="text-slate-950 p-4 text-center ">
             © 2023 Copyright:
             <a class="text-slate-950" href="www.linkedin.com/in/
-manfred-flores-cerdas-365881269">Manfred Flores</a>
+manfred-flores-cerdas-365881269">Upala, Alajuela, Costa Rica</a>
         </div>
     </footer>
 </template>
