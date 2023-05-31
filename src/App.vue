@@ -1,5 +1,29 @@
 <template>
-    <header class="p-3.5">
+    <header class="p-3.5 header">
+        <!-- NAVBAR -->
+        <nav class="navbar ">
+
+            <a class="logo" href=""><img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Escudo_Cantonal_Upala.jpg"
+                    class="h-8 m-3 logo-image" alt="Logo" /></a>
+            <input type="checkbox" id="toggler">
+            <label for="toggler"><i class="fa-solid fa-bars"></i></label>
+
+
+            <div class="menu">
+                <ul class="list font-bold text-teal-600">
+                    <li><a href=""><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href=""><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                    <li><a href=""><i class="fa-solid fa-users"></i> About us</a></li>
+
+                </ul>
+            </div>
+
+        </nav>
+        <!-- FIN NAVBAR -->
+
+
+
+
 
         <!-- TITULO -->
         <div class="relative overflow-hidden bg-cover bg-no-repeat" style="
@@ -33,10 +57,10 @@
                 </div>
             </div>
         </div>
-        <div class="Info" id="descripcion">
-            <p class="p-3.5 text-lg font-medium max-w-lg text-2xl font-semibold leading-loose text-justify  text-teal-600">
-                Nuestro objetivo es fomentar el turismo local y resaltar los tesoros ocultos de nuestro pueblo. 
-                Creemos firmemente que al mostrar la belleza de nuestros lugares y proporcionar guias sobre cómo llegar, 
+        <div class="descripcion" id="descripcion">
+            <p class=" p-3.5 text-lg font-medium  text-2xl font-semibold leading-loose text-justify  text-teal-600">
+                Nuestro objetivo es fomentar el turismo local y resaltar los tesoros ocultos de nuestro pueblo.
+                Creemos firmemente que al mostrar la belleza de nuestros lugares y proporcionar guias sobre cómo llegar,
                 podemos inspirar a los visitantes a explorar y apreciar todo lo que tenemos para ofrecer.</p>
         </div>
     </header>
@@ -76,11 +100,17 @@
                             {{ place.descripcion }}
                         </p>
 
-                        <a :href="place.direccion"
-                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                            data-te-ripple-init data-te-ripple-color="light">
-                            ¿Como llegar?
-                        </a>
+                        <div class="vinculos">
+                            <a :href="place.direccion"
+                                class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                                data-te-ripple-init data-te-ripple-color="light">
+                                ¿Como llegar?
+                            </a>
+
+                            
+                        </div>
+
+
                     </div>
                 </div>
             </div>
@@ -95,7 +125,7 @@
         <ul class="flex justify-center -space-x-px">
             <li>
                 <a href="#" @click="setCurrentPage(currentPage - 1)"
-                    :class="{ 'pointer-events-none opacity-50': currentPage === 1 }" class="block px-3 py-2 leading-tight text-gray-500 bg-white 
+                    :class="{ 'pointer-events-none opacity-50': currentPage === 1 }" class="block px-3 py-2 leading-tight text-gray-500 bg-white
                     hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700">
                     <span class="sr-only">Previous</span>
                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
@@ -117,7 +147,7 @@
             </li>
             <li>
                 <a href="#" @click="setCurrentPage(currentPage + 1)"
-                    :class="{ 'pointer-events-none opacity-50': currentPage === pages }" class="block px-3 py-2 leading-tight text-gray-500 bg-white 
+                    :class="{ 'pointer-events-none opacity-50': currentPage === pages }" class="block px-3 py-2 leading-tight text-gray-500 bg-white
                     hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700">
 
                     <span class="sr-only ">Next</span>
@@ -131,14 +161,6 @@
             </li>
         </ul>
     </nav>
-
-
-
-
-
-
-
-
 
     <!--Footer container-->
     <footer class=" text-center text-white justify-center">
@@ -186,6 +208,8 @@
 manfred-flores-cerdas-365881269">Upala, Alajuela, Costa Rica</a>
         </div>
     </footer>
+
+    
 </template>
 
 
@@ -238,6 +262,8 @@ export default {
         }
     }
 };
+
+
 </script>
 
 
