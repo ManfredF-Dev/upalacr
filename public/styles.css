@@ -6,9 +6,6 @@ body {
 	padding: 0;
 }
 
-
-
-
 /* NAVBAR */
 
 .navbar {
@@ -133,7 +130,18 @@ navbar label {
 @media only screen and (max-width: 600px) {
 	body {
 		font-size: 16px;
+		background-image: url("https://i.pinimg.com/564x/0c/3c/c6/0c3cc65bbcca2120193ecf7833a6c665.jpg");
+		background-size: 100% auto;
+		/* background-repeat: no-repeat; */
 	}
+
+	/* #cartas{
+		background-image: url('https://i.pinimg.com/564x/c5/82/15/c582155dee8b35fb196acff05ca658f9.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		
+		
+	} */
 
 	.container {
 		padding: 20px;
@@ -200,18 +208,15 @@ navbar label {
 	}
 
 	#descripcion {
-		
 		display: flex;
 		justify-content: center;
 		/* Centrado horizontal */
 		align-items: center;
 		/* Centrado vertical  */
-		
-	
 	}
-	#descripcion p{
+
+	#descripcion p {
 		width: 100%;
-		
 	}
 
 	#Inicio {

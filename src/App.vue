@@ -79,7 +79,7 @@
             <div class="d-sm-flex align-self-sm-stretch col-sm-6 col-md-6 col-lg-4">
 
                 <div id="cartas"
-                    class="card m-2 block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-stone-700">
+                    class="cartas card m-2 block rounded-lg bg-amber-600 shadow-[0_3px_16px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-stone-700">
                     <div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init
                         data-te-ripple-color="light">
 
@@ -91,7 +91,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-6 bg-slate-900 rounded ">
                         <h5 id="Informacion"
                             class="card-body text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
                             {{ place.nombre }}
