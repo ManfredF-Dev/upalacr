@@ -6,6 +6,12 @@ body {
 	padding: 0;
 }
 
+.vinculos {
+	display: flex;
+	justify-content: space-between;
+}
+
+
 /* NAVBAR */
 
 .navbar {
@@ -132,16 +138,8 @@ navbar label {
 		font-size: 16px;
 		background-image: url("https://i.pinimg.com/564x/0c/3c/c6/0c3cc65bbcca2120193ecf7833a6c665.jpg");
 		background-size: 100% auto;
-		/* background-repeat: no-repeat; */
+		background-attachment: fixed;
 	}
-
-	/* #cartas{
-		background-image: url('https://i.pinimg.com/564x/c5/82/15/c582155dee8b35fb196acff05ca658f9.jpg');
-		background-repeat: no-repeat;
-		background-position: center;
-		
-		
-	} */
 
 	.container {
 		padding: 20px;
@@ -178,6 +176,9 @@ navbar label {
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
 	body {
 		font-size: 18px;
+		background-image: url("https://i.pinimg.com/564x/0c/3c/c6/0c3cc65bbcca2120193ecf7833a6c665.jpg");
+		background-size: 100% auto;
+		background-attachment: fixed;
 	}
 
 	.container {
@@ -201,6 +202,9 @@ navbar label {
 @media only screen and (min-width: 1025px) {
 	body {
 		font-size: 20px;
+		background-image: url("https://i.pinimg.com/564x/0c/3c/c6/0c3cc65bbcca2120193ecf7833a6c665.jpg");
+		background-size: 100% auto;
+		background-attachment: fixed;
 	}
 
 	.container {

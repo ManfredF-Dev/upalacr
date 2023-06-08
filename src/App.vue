@@ -1,5 +1,5 @@
 <template>
-    <header class="p-3.5 header">
+    <header v-if="currentPage === 1" class="p-3.5 header">
         <!-- NAVBAR -->
         <nav class="navbar ">
 
@@ -11,8 +11,8 @@
 
             <div class="menu">
                 <ul class="list font-bold text-teal-600">
-                    <li><a href=""><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href=""><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                    <li><a href="http://localhost:8080"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="http://localhost:8080/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
                     <li><a href=""><i class="fa-solid fa-users"></i> About us</a></li>
 
                 </ul>
@@ -28,11 +28,11 @@
         <!-- TITULO -->
         <div class="relative overflow-hidden bg-cover bg-no-repeat" style="
         background-position: 50%;
-        background-image: url('https://cdn.sancarlosdigital.com/wp-content/uploads/2018/10/foto-upala.jpg');
+        /* background-image: url('https://cdn.sancarlosdigital.com/wp-content/uploads/2018/10/foto-upala.jpg'); */
         height: 300px;">
 
             <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
-                style="background-color: rgba(0, 0, 0, 0.75)">
+                style="background-color: rgba(0, 0, 0, 0.50)">
                 <div class="flex h-full items-center justify-center">
                     <div id="titulo" class="px-6 text-center text-white md:px-12">
 
@@ -64,7 +64,6 @@
                 podemos inspirar a los visitantes a explorar y apreciar todo lo que tenemos para ofrecer.</p>
         </div>
     </header>
-
 
 
     <!-- CONTENIDO -->
@@ -106,7 +105,11 @@
                                 data-te-ripple-init data-te-ripple-color="light">
                                 ¿Como llegar?
                             </a>
-
+                            <a href=""
+                                class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                                data-te-ripple-init data-te-ripple-color="light">
+                                0 <i class="fa-solid fa-comment-dots"></i>
+                            </a>
                             
                         </div>
 
@@ -125,7 +128,8 @@
         <ul class="flex justify-center -space-x-px">
             <li>
                 <a href="#" @click="setCurrentPage(currentPage - 1)"
-                    :class="{ 'pointer-events-none opacity-50': currentPage === 1 }" class="block px-3 py-2 leading-tight text-gray-500 bg-white
+                    :class="{ 'pointer-events-none opacity-50': currentPage === 1 }" 
+                    class="block px-3 py-2 leading-tight text-gray-500
                     hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700">
                     <span class="sr-only">Previous</span>
                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
@@ -147,7 +151,8 @@
             </li>
             <li>
                 <a href="#" @click="setCurrentPage(currentPage + 1)"
-                    :class="{ 'pointer-events-none opacity-50': currentPage === pages }" class="block px-3 py-2 leading-tight text-gray-500 bg-white
+                    :class="{ 'pointer-events-none opacity-50': currentPage === pages }" 
+                    class="block px-3 py-2 leading-tight text-gray-500 
                     hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700">
 
                     <span class="sr-only ">Next</span>
